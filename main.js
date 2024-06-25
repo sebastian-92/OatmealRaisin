@@ -1222,7 +1222,7 @@ var Game={};
 		});
 	}
 	
-	//replacing an existing canvas picture with a new one at runtime : Game.Loader.Replace('perfectCookie.png','imperfectCookie.png');
+	//replacing an existing canvas picture with a new one at runtime : Game.Loader.Replace('newCookie.png','imnewCookie.png');
 	//upgrades and achievements can use other pictures than icons.png; declare their icon with [posX,posY,'http://example.com/myIcons.png']
 	//check out the "UNLOCKING STUFF" section to see how unlocking achievs and upgrades is done
 })();
@@ -6628,10 +6628,7 @@ Game.Launch=function()
 					'<div class="title">'+loc("Raisin")+
 						(App?'<div class="listing"><a class="option smallFancyButton" '+Game.clickStr+'="Game.toSave=true;Game.toQuit=true;">'+loc("Save & Quit")+'</a></div>':'')+
 						'<div class="listing"><a class="option smallFancyButton" '+Game.clickStr+'="Game.OpenSesame();Game.recalculateGains=1;PlaySound(\'snd/tick.mp3\');">'+loc("Dev")+'</a><label>'+loc("Dev options without name change")+'</label></div>'+
-						'<div class="listing"><a class="option smallFancyButton" '+Game.clickStr+'="Game.ExportSave();PlaySound(\'snd/tick.mp3\');">'+loc("Export save")+'</a><a class="option smallFancyButton" '+Game.clickStr+'="Game.ImportSave();PlaySound(\'snd/tick.mp3\');">'+loc("Import save")+'</a><label>'+loc("You can use this to backup your save or to transfer it to another computer (shortcut for import: ctrl+O)")+'</label></div>'+
-						(!App?('<div class="listing"><a class="option smallFancyButton" '+Game.clickStr+'="Game.FileSave();PlaySound(\'snd/tick.mp3\');">'+loc("Save to file")+'</a><a class="option smallFancyButton" style="position:relative;"><input id="FileLoadInput" type="file" style="cursor:pointer;opacity:0;position:absolute;left:0px;top:0px;width:100%;height:100%;" onchange="Game.FileLoad(event);" '+Game.clickStr+'="PlaySound(\'snd/tick.mp3\');"/>'+loc("Load from file")+'</a><label>'+loc("Use this to keep backups on your computer")+'</label></div>'):'')+
-						'<div class="listing" style="text-align:right;"><label>'+loc("Delete all your progress, including your achievements")+'</label><a class="option smallFancyButton warning" '+Game.clickStr+'="Game.HardReset();PlaySound(\'snd/tick.mp3\');">'+loc("Wipe save")+'</a></div>'+
-						
+						'<div class="listing"><a class="option smallFancyButton" '+Game.clickStr+'="Game.OpenSesame();Game.recalculateGains=1;PlaySound(\'snd/tick.mp3\');">'+loc("Dev")+'</a><label>'+loc("Dev options without name change")+'</label></div>'+
 					'</div>'+
 				'</div>'+
 					'<div class="block" style="padding:0px;margin:8px 4px;">'+
@@ -15442,7 +15439,7 @@ Game.Launch=function()
 									var spin=Game.T*(0.005+i*0.001)+i+(ii/num)*Math.PI*2;
 									x+=Math.sin(spin)*space;
 									y+=Math.cos(spin)*space;
-									ctx.drawImage(Pic('perfectCookie.png'),x-s/2,y-s/2,s,s);
+									ctx.drawImage(Pic('newCookie.png'),x-s/2,y-s/2,s,s);
 								}
 								space+=s/2;
 							}
@@ -15463,7 +15460,7 @@ Game.Launch=function()
 								ctx.drawImage(Pic('nest.png'),-nestW/2,-nestH/2+130,nestW,nestH);
 							}
 							//ctx.rotate(((Game.startDate%360)/360)*Math.PI*2);
-							ctx.drawImage(Pic('perfectCookie.png'),-s/2,-s/2,s,s);
+							ctx.drawImage(Pic('newCookie.png'),-s/2,-s/2,s,s);
 							
 							if (goodBuff && Game.prefs.particles)//sparkle
 							{
@@ -15506,7 +15503,7 @@ Game.Launch=function()
 						var x=Game.cookieOriginX-s/2;
 						var y=Game.cookieOriginY-s/2;
 						if (Game.prefs.fancy) ctx.drawImage(Pic('cookieShadow.png'),x,y+20,s,s);
-						ctx.drawImage(Pic('perfectCookie.png'),x,y,s,s);
+						ctx.drawImage(Pic('newCookie.png'),x,y,s,s);
 					}
 					
 					//cursors
