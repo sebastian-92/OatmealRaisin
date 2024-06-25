@@ -6624,6 +6624,12 @@ Game.Launch=function()
 						'</div>'+
 					'</div>'+
 					'<div class="block" style="padding:0px;margin:8px 4px;">'+
+					'<div class="subsection" style="padding:0px;">'+
+					'<div class="title">'+loc("Raisin")+
+						(App?'<div class="listing"><a class="option smallFancyButton" '+Game.clickStr+'="Game.OpenSesame()">'+loc("Dev mode")+'</a></div>':'')+
+					'</div>'+
+				'</div>'+
+					'<div class="block" style="padding:0px;margin:8px 4px;">'+
 						'<div class="subsection" style="padding:0px;">'+
 					
 						'<div class="title">'+loc("Settings")+'</div>'+
