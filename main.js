@@ -6622,7 +6622,7 @@ Game.Launch=function()
 							'<div class="listing" style="text-align:right;"><label>'+loc("Delete all your progress, including your achievements")+'</label><a class="option smallFancyButton warning" '+Game.clickStr+'="Game.HardReset();PlaySound(\'snd/tick.mp3\');">'+loc("Wipe save")+'</a></div>'+
 							
 						'</div>'+
-					'</div>'+S
+					'</div>'+
 					'<div class="block" style="padding:0px;margin:8px 4px;">'+
 					'<div class="subsection" style="padding:0px;">'+
 					'<div class="title">'+loc("Raisin")+

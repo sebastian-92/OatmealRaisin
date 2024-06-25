@@ -6,6 +6,7 @@ Game.LoadMod("https://cookiemonsterteam.github.io/CookieMonster/dist/CookieMonst
 Game.LoadMod('https://cdn.jsdelivr.net/gh/Ancyker/Crustulum/Crustulum.js');
 Game.LoadMod('https://rawgit.com/yannprada/cookie-garden-helper/master/cookie-garden-helper.js');
 Game.LoadMod('https://cdn.jsdelivr.net/gh/klattmose/CookieClicker/Horticookie.js');
+Game.LoadMod("https://icehawk78.github.io/FrozenCookies/frozen_cookies.js");
     } else {
         setTimeout(doSomething, 1000);
     }
