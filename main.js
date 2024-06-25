@@ -6626,7 +6626,12 @@ Game.Launch=function()
 					'<div class="block" style="padding:0px;margin:8px 4px;">'+
 					'<div class="subsection" style="padding:0px;">'+
 					'<div class="title">'+loc("Raisin")+
-						(App?'<div class="listing"><a class="option smallFancyButton" '+Game.clickStr+'="Game.OpenSesame()">'+loc("Dev mode")+'</a></div>':'')+
+						(App?'<div class="listing"><a class="option smallFancyButton" '+Game.clickStr+'="Game.OpenSesame();Game.toSave=true;Game.toQuit=true;">'+loc("Save & Quit")+'</a></div>':'')+
+						'<div class="listing"><a class="option smallFancyButton" '+Game.clickStr+'="Game.toSave=true;PlaySound(\'snd/tick.mp3\');">'+loc("Save")+'</a><label>'+loc("Save manually (the game autosaves every 60 seconds; shortcut: ctrl+S)")+'</label></div>'+
+						'<div class="listing"><a class="option smallFancyButton" '+Game.clickStr+'="Game.ExportSave();PlaySound(\'snd/tick.mp3\');">'+loc("Export save")+'</a><a class="option smallFancyButton" '+Game.clickStr+'="Game.ImportSave();PlaySound(\'snd/tick.mp3\');">'+loc("Import save")+'</a><label>'+loc("You can use this to backup your save or to transfer it to another computer (shortcut for import: ctrl+O)")+'</label></div>'+
+						(!App?('<div class="listing"><a class="option smallFancyButton" '+Game.clickStr+'="Game.FileSave();PlaySound(\'snd/tick.mp3\');">'+loc("Save to file")+'</a><a class="option smallFancyButton" style="position:relative;"><input id="FileLoadInput" type="file" style="cursor:pointer;opacity:0;position:absolute;left:0px;top:0px;width:100%;height:100%;" onchange="Game.FileLoad(event);" '+Game.clickStr+'="PlaySound(\'snd/tick.mp3\');"/>'+loc("Load from file")+'</a><label>'+loc("Use this to keep backups on your computer")+'</label></div>'):'')+
+						'<div class="listing" style="text-align:right;"><label>'+loc("Delete all your progress, including your achievements")+'</label><a class="option smallFancyButton warning" '+Game.clickStr+'="Game.HardReset();PlaySound(\'snd/tick.mp3\');">'+loc("Wipe save")+'</a></div>'+
+						
 					'</div>'+
 				'</div>'+
 					'<div class="block" style="padding:0px;margin:8px 4px;">'+
