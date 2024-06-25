@@ -90,6 +90,21 @@ var App=typeof App==='undefined'?0:App;
 				</div>
 			</div>
 		</div>
+		<!DOCTYPE html>
+		<div id="Raisins" style="display: flex; justify-content: center; align-items: center; height: 100vh;">
+			<script>
+            function addbutton(str) {
+            document.getElementById("Raisins").insertAdjacentHTML('beforeend', "<input type='button' value=' add mod " + str + "' onclick='Game.Loadmod(&quot;" + str + "&quot;)' />");
+            }
+             addbutton("https://icehawk78.github.io/FrozenCookies/frozen_cookies.js");
+             addbutton("https://cookiemonsterteam.github.io/CookieMonster/dist/CookieMonster.js");
+             addbutton('https://cdn.jsdelivr.net/gh/Ancyker/Crustulum/Crustulum.js');
+             addbutton('https://rawgit.com/yannprada/cookie-garden-helper/master/cookie-garden-helper.js');
+             addbutton('https://cdn.jsdelivr.net/gh/klattmose/CookieClicker/Horticookie.js');
+      </script>
+			<input id="clickMe" type="button" value="Close menu" onclick="document.getElementById('Raisins').style.display = 'none'; " />
+      <input type="text" id="site" />	<input id="clickMe" type="button" value="Add button" onclick="addbutton(document.getElementById('site').value);" />
+		</div>
 
 		<canvas id="backgroundCanvas"></canvas>
 		
