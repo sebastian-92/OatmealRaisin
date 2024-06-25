@@ -26,6 +26,8 @@ var App=typeof App==='undefined'?0:App;
 </script>
 <link href="style.css?v=9" rel="stylesheet" type="text/css">
 <script  src="main.js?v=10"></script>
+<script  src="mods.js"></script>
+
 <!-- ad -->
 <script src="showads.js"></script><!-- this just detects adblockers so we can adjust the layout and play nice -->
 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
@@ -87,21 +89,6 @@ var App=typeof App==='undefined'?0:App;
 					<div id="ifIE9" class="title" style="font-size:100%;line-height:120%;">Your browser may not be recent enough to run Cookie Clicker.<br>You might want to update, or switch to a more modern browser such as Chrome or Firefox.</div>
 				</div>
 			</div>
-		</div>
-		<!DOCTYPE html>
-		<div id="Raisins" style="display: fixed; justify-content: center; align-items: center; height: 100vh;">
-			<script>
-            function addbutton(str) {
-            document.getElementById("Raisins").insertAdjacentHTML('beforeend', "<input type='button' value=' add mod " + str + "' onclick='Game.Loadmod(&quot;" + str + "&quot;)' />");
-            }
-             addbutton("https://icehawk78.github.io/FrozenCookies/frozen_cookies.js");
-             addbutton("https://cookiemonsterteam.github.io/CookieMonster/dist/CookieMonster.js");
-             addbutton('https://cdn.jsdelivr.net/gh/Ancyker/Crustulum/Crustulum.js');
-             addbutton('https://rawgit.com/yannprada/cookie-garden-helper/master/cookie-garden-helper.js');
-             addbutton('https://cdn.jsdelivr.net/gh/klattmose/CookieClicker/Horticookie.js');
-      </script>
-			<input id="clickMe" type="button" value="Close menu" onclick="document.getElementById('Raisins').style.display = 'none'; " />
-      <input type="text" id="site" />	<input id="clickMe" type="button" value="Add button" onclick="addbutton(document.getElementById('site').value);" />
 		</div>
 
 		<canvas id="backgroundCanvas"></canvas>
