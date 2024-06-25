@@ -2488,8 +2488,8 @@ Game.Launch=function()
 		
 		Game.externalDataLoaded=false;
 		
-		Game.grandmaNames=['THE OG GERTRUDE', 'GERTRUDE I', 'GERTRUDE II', 'GERTRUDE III', 'EDURTREG'];
-		Game.customGrandmaNames=[];
+		Game.grandmaNames=[];
+		Game.customGrandmaNames=['THE OG GERTRUDE', 'GERTRUDE I', 'GERTRUDE II', 'GERTRUDE III', 'EDURTREG'];
 		Game.heralds=0;
 		
 		Game.GrabData=function()
