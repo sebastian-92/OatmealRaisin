@@ -1,14 +1,24 @@
-setTimeout(doSomething, 3000);
+// Load Mods
+setTimeout(doSomething, 500);
 function doSomething() {
     var element = document.getElementById('particle0');
-    if (typeof (element) != 'undefined' && element != null) {
-Game.LoadMod('https://rawgit.com/yannprada/cookie-garden-helper/master/cookie-garden-helper.js');
-Game.LoadMod('https://cdn.jsdelivr.net/gh/klattmose/CookieClicker/Horticookie.js');
-Game.LoadMod("https://icehawk78.github.io/FrozenCookies/frozen_cookies.js");
-Game.LoadMod("https://cookiemonsterteam.github.io/CookieMonster/dist/CookieMonster.js");
-Game.LoadMod('https://cdn.jsdelivr.net/gh/Ancyker/Crustulum/Crustulum.js');
-Game.LoadMod('https://staticvariablejames.github.io/InsugarTrading/InsugarTrading.js');
+    if (Game.ready) {
+        Game.LoadMod('https://klattmose.github.io/CookieClicker/CCSE.js');
+        Game.LoadMod('https://klattmose.github.io/CookieClicker/CCSE-POCs/BlackholeInverter.js?v=1.14');
+        Game.LoadMod('https://staticvariablejames.github.io/InsugarTrading/InsugarTrading.js');
+        Game.LoadMod('https://klattmose.github.io/CookieClicker/Horticookie.js');
+        Game.LoadMod('https://klattmose.github.io/CookieClicker/AmericanSeason.js');
+        Game.LoadMod('https://klattmose.github.io/CookieClicker/minigameCasino.js');
+        Game.LoadMod("https://klattmose.github.io/CookieClicker/IdleTrading.js?v=1.10");
+        Game.LoadMod("frozenCookiesCustom.js");
+        Game.LoadMod('https://cdn.jsdelivr.net/gh/Ancyker/Crustulum/Crustulum.js');
+        javascript: (() => {
+            var script = document.createElement('script');
+            script.src = "https://www.lschaefer.xyz/cookieClicker/index.js";
+            script.id = "hostname"; document.head.appendChild(script);
+        })();
+        var scriptII=document.createElement('script');scriptII.setAttribute('type','text/javascript');scriptII.setAttribute('src','https://worldwidewaves.github.io/Cookie-Stonks/main.user.js');document.body.appendChild(scriptII);
     } else {
-        setTimeout(doSomething, 3000);
+        setTimeout(doSomething, 500);
     }
 }
