@@ -1,7 +1,6 @@
 // Load Mods
 setTimeout(doSomething, 500);
 function doSomething() {
-    var element = document.getElementById('particle0');
     if (Game.ready) {
         Game.LoadMod('https://klattmose.github.io/CookieClicker/CCSE.js');
         Game.LoadMod('https://klattmose.github.io/CookieClicker/CCSE-POCs/BlackholeInverter.js?v=1.14');
