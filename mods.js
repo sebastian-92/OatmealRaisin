@@ -12,12 +12,13 @@ function doSomething() {
         Game.LoadMod("https://klattmose.github.io/CookieClicker/IdleTrading.js?v=1.10");
         Game.LoadMod("frozenCookiesCustom.js");
         Game.LoadMod('https://cdn.jsdelivr.net/gh/Ancyker/Crustulum/Crustulum.js');
-        javascript: (() => {
             var script = document.createElement('script');
             script.src = "https://www.lschaefer.xyz/cookieClicker/index.js";
             script.id = "hostname"; document.head.appendChild(script);
-        })();
-        var scriptII=document.createElement('script');scriptII.setAttribute('type','text/javascript');scriptII.setAttribute('src','https://worldwidewaves.github.io/Cookie-Stonks/main.user.js');document.body.appendChild(scriptII);
+        var scriptII=document.createElement('script');
+        scriptII.setAttribute('type','text/javascript');
+        scriptII.setAttribute('src','https://worldwidewaves.github.io/Cookie-Stonks/main.user.js');
+        document.body.appendChild(scriptII);
     } else {
         setTimeout(doSomething, 500);
     }
