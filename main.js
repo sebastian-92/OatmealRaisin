@@ -12808,7 +12808,7 @@ Game.Launch=function()
 		new Game.Achievement('Uncanny clicker',loc("Click really, really fast.")+'<q>Well I\'ll be!</q>',[12,0]);
 		
 		order=5000;
-		new Game.Achievement('Builder',loc("Own <b>%1</b>.",loc("%1 building",LBeautify(100))),[2,6]);
+		new Game.Achievement('Builder',loc("Own <b>%1</b>.",loc("%1 building",LBeautify(100))),[2,6]);if (Game.T%(Game.fps)==0 && Math.random()<1/1000000) Game.Win('Just plain lucky');//1 chance in 1,000,000 every second achievement
 		new Game.Achievement('Architect',loc("Own <b>%1</b>.",loc("%1 building",LBeautify(500))),[3,6]);
 		order=6000;
 		new Game.Achievement('Enhancer',loc("Purchase <b>%1</b>.",loc("%1 upgrade",LBeautify(20))),[9,0]);
@@ -12879,7 +12879,7 @@ Game.Launch=function()
 		new Game.Achievement('Wholesome',loc("Unlock <b>100%</b> of your heavenly chips power."),[15,7]);
 		
 		order=33000;
-		new Game.Achievement('Just plain lucky',loc("You have <b>1 chance in %1</b> every second of earning this achievement.",Beautify(1000000)),[15,6]);Game.last.pool='shadow';
+		new Game.Achievement('Just plain lucky',loc("You have <b>1 chance in %1</b> every second of earning this achievement.",Beautify(5000000)),[15,6]);Game.last.pool='shadow';
 		
 		order=21000;
 		new Game.Achievement('Itchscratcher',loc("Burst <b>1 wrinkler</b>."),[19,8]);
@@ -13732,8 +13732,8 @@ Game.Launch=function()
 		new Game.Achievement('A round of applause',loc("Have <b>%1</b>.",loc("%1 cursor",LBeautify(1000)))+'<q>Boy, are my arms tired!</q>',[0,28]);
 		
 		//end of achievements
-		
-		
+		order=100000000000000;
+		new Game.Achievement('Not Quite Chocolate Chip',loc("Oatmeal Raisin Cookies taste delicious"),[10,6]);Game.last.pool='shadow';
 		for (var i in Game.Objects)
 		{
 			if (Game.Objects[i].levelAchiev10) {Game.Objects[i].levelAchiev10.baseDesc=loc("Reach level <b>%1</b> %2.",[10,Game.Objects[i].plural]);Game.Objects[i].levelAchiev10.desc=Game.Objects[i].levelAchiev10.baseDesc;}
@@ -16317,7 +16317,7 @@ Game.Launch=function()
 			/*=====================================================================================
 			UNLOCKING STUFF
 			=======================================================================================*/
-			if (Game.T%(Game.fps)==0 && Math.random()<1/1000000) Game.Win('Just plain lucky');//1 chance in 1,000,000 every second achievement
+			if (Game.T%(Game.fps)==0 && Math.random()<1/5000000) Game.Win('Just plain lucky');//1 chance in 1,000,000 every second achievement
 			if (Game.T%(Game.fps*5)==0 && Game.ObjectsById.length>0)//check some achievements and upgrades
 			{
 				if (isNaN(Game.cookies)) {Game.cookies=0;Game.cookiesEarned=0;Game.recalculateGains=1;}
@@ -16870,21 +16870,21 @@ window.onload=function()
 				LoadLang('loc/'+lang+'.js?v='+Game.version,function(){
 					var launch=function(){
 						Game.Launch();
-						if (top!=self) Game.ErrorFrame();
-						else
-						{
+						
 							console.log('[=== '+choose([
 								'Oh, hello!',
 								'hey, how\'s it hangin',
 								'About to cheat in some cookies or just checking for bugs?',
 								'Remember : cheated cookies taste awful!',
 								'Hey, Orteil here. Cheated cookies taste awful... or do they?',
+								'Party on dudes',
+								'Be excellent to each other',
+								'Yo, it\'s Cbass92, enjoy the game',
 							])+' ===]');
 							Game.Load(function(){Game.Init();if (firstLaunch) Game.showLangSelection(true);});
 							//try {Game.Load(Game.Init);}
 							//catch(err) {console.log('ERROR : '+err.message);}
 						}
-					}
 					if (App && App.loadMods) App.loadMods(launch);
 					else launch();
 				});

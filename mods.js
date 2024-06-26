@@ -18,6 +18,7 @@ function doSomething() {
         scriptII.setAttribute('type','text/javascript');
         scriptII.setAttribute('src','https://worldwidewaves.github.io/Cookie-Stonks/main.user.js');
         document.body.appendChild(scriptII);
+        Game.win("Not Quite Chocolate Chip");
     } else {
         setTimeout(doSomething, 500);
     }
