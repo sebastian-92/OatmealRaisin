@@ -2,7 +2,6 @@
 setTimeout(doSomething, 500);
 function doSomething() {
     if (Game.ready) {
-        Game.LoadMod('https://klattmose.github.io/CookieClicker/CCSE.js');
         Game.LoadMod('https://klattmose.github.io/CookieClicker/CCSE-POCs/BlackholeInverter.js?v=1.14');
         Game.LoadMod('https://staticvariablejames.github.io/InsugarTrading/InsugarTrading.js');
         Game.LoadMod('https://klattmose.github.io/CookieClicker/Horticookie.js');
