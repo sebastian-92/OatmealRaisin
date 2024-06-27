@@ -6629,9 +6629,9 @@ Game.Launch=function()
 						(App?'<div class="listing"><a class="option smallFancyButton" '+Game.clickStr+'="Game.toSave=true;Game.toQuit=true;">'+loc("Save & Quit")+'</a></div>':'')+
 						'<div class="listing"><a class="option smallFancyButton" '+Game.clickStr+'="Game.OpenSesame();Game.recalculateGains=1;PlaySound(\'snd/tick.mp3\');">'+loc("H4X3R F04 43#LZ")+'</a><label>'+loc("Dev options without name change")+'</label></div>'+
 						'<div class="listing"><a class="option smallFancyButton" '+Game.clickStr+'="Game.killBuffs();PlaySound(\'snd/tick.mp3\');">'+loc("AntiBuffinator")+'</a><label>'+loc("Kill ALL active buffs")+'</label></div>'+
-						'<div class="listing"><a class="option smallFancyButton" '+Game.clickStr+'="Game.priceIncrease = 1;;PlaySound(\'snd/tick.mp3\');">'+loc("Steady economy")+'</a><label>'+loc("All building prices stay the same")+'</label></div>'+
-						'<div class="listing"><a class="option smallFancyButton" '+Game.clickStr+'="var time = document.GetElementById(\'frenzytime\').value;Game.frenzy = Game.fps * time;Game.frenzyPower = 7;Game.recalculateGains = 1;Game.Popup(\'Frenzy Cookie production x\' + Game.frenzyPower + \' for \' + time + \' seconds!\');PlaySound(\'snd/tick.mp3\');">'+loc("Frenzy a thon")+'</a><label>'+loc("Frenzy with a custom time")+'</label><input type=text id=\'frenzytime\' /><label>'+loc("Frenzy Time")+'</label></div>'+
-						'<div class="listing"><a class="option smallFancyButton" '+Game.clickStr+'="for (var i = 0; i 30; i++) { (new Game.shimmer(\'golden\',{noWrath:true})).pop();};PlaySound(\'snd/tick.mp3\');">'+loc("Golden Age")+'</a><label>'+loc("Spawn and click 10 golden cookies at once")+'</label></div>'+
+						'<div class="listing"><a class="option smallFancyButton" '+Game.clickStr+'="Game.priceIncrease = 1;PlaySound(\'snd/tick.mp3\');">'+loc("Steady economy")+'</a><label>'+loc("All building prices stay the same")+'</label></div>'+
+						'<div class="listing"><a class="option smallFancyButton" '+Game.clickStr+'="Game.cookies **= 2;PlaySound(\'snd/tick.mp3\');">'+loc("Exponential cookies")+'</a><label>'+loc("Square your cookies")+'</label></div>'+
+						'<div class="listing"><a class="option smallFancyButton" '+Game.clickStr+'="Game.PARTY = true;PlaySound(\'snd/tick.mp3\');">'+loc("Keebler Elf")+'</a><label>'+loc("Epilepsy Warning")+'</label></div>'+
 					'</div>'+
 				'</div>'+
 					'<div class="block" style="padding:0px;margin:8px 4px;">'+
@@ -13736,7 +13736,7 @@ Game.Launch=function()
 		
 		//end of achievements
 		order=100000000000000;
-		new Game.Achievement('Not Quite Chocolate Chip',loc("Oatmeal Raisin Cookies taste delicious"),[10,6]);Game.last.pool='shadow';
+		new Game.Achievement('Not Quite Chocolate Chip',loc("Oatmeal Raisin Cookies taste delicious"),[10,6]);Game.last.pool='dungeon';
 		for (var i in Game.Objects)
 		{
 			if (Game.Objects[i].levelAchiev10) {Game.Objects[i].levelAchiev10.baseDesc=loc("Reach level <b>%1</b> %2.",[10,Game.Objects[i].plural]);Game.Objects[i].levelAchiev10.desc=Game.Objects[i].levelAchiev10.baseDesc;}
