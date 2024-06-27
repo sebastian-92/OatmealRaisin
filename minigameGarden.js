@@ -876,14 +876,14 @@ M.launch=function()
 		
 		M.soils={
 			'dirt':{
-				name:loc("Dirt"),
+				name:loc("Sugar"),
 				icon:0,
 				tick:5,
 				effMult:1,
 				weedMult:1,
 				req:0,
 				effsStr:'<div class="gray">&bull; '+loc("tick every %1",'<b>'+Game.sayTime(5*60*Game.fps)+'</b>')+'</div>',
-				q:loc("Simple, regular old dirt that you'd find in nature."),
+				q:loc("Simple, regular old sugar that you'd find in nature."),
 			},
 			'fertilizer':{
 				name:loc("Fertilizer"),
@@ -896,7 +896,7 @@ M.launch=function()
 				q:loc("Soil with a healthy helping of fresh manure. Plants grow faster but are less efficient."),
 			},
 			'clay':{
-				name:loc("Clay"),
+				name:loc("Pudding"),
 				icon:2,
 				tick:15,
 				effMult:1.25,
@@ -906,24 +906,34 @@ M.launch=function()
 				q:loc("Rich soil with very good water retention. Plants grow slower but are more efficient."),
 			},
 			'pebbles':{
-				name:loc("Pebbles"),
+				name:loc("Crumbs"),
 				icon:3,
 				tick:5,
 				effMult:0.25,
 				weedMult:0.1,
 				req:200,
 				effsStr:'<div class="gray">&bull; '+loc("tick every %1",'<b>'+Game.sayTime(5*60*Game.fps)+'</b>')+'</div><div class="red">&bull; '+loc("passive plant effects")+' <b>-75%</b></div><div class="green">&bull; '+loc("<b>%1% chance</b> of collecting seeds automatically when plants expire",35)+'</div><div class="green">&bull; '+loc("weed growth")+' <b>-90%</b></div>',
-				q:loc("Dry soil made of small rocks tightly packed together. Not very conducive to plant health, but whatever falls off your crops will be easy to retrieve.<br>Useful if you're one of those farmers who just want to find new seeds without having to tend their garden too much."),
+				q:loc("Dry soil made of small crumbs tightly packed together. Not very conducive to plant health, but whatever falls off your crops will be easy to retrieve.<br>Useful if you're one of those farmers who just want to find new seeds without having to tend their garden too much."),
 			},
 			'woodchips':{
-				name:loc("Wood chips"),
+				name:loc("Chocolate chips"),
 				icon:4,
 				tick:5,
 				effMult:0.25,
 				weedMult:0.1,
 				req:300,
 				effsStr:'<div class="gray">&bull; '+loc("tick every %1",'<b>'+Game.sayTime(5*60*Game.fps)+'</b>')+'</div><div class="red">&bull; '+loc("passive plant effects")+' <b>-75%</b></div><div class="green">&bull; '+loc("plants spread and mutate <b>%1 times more</b>",3)+'</div><div class="green">&bull; '+loc("weed growth")+' <b>-90%</b></div>',
-				q:loc("Soil made of bits and pieces of bark and sawdust. Helpful for young sprouts to develop, not so much for mature plants."),
+				q:loc("Soil made of bits and pieces of chocolate and flour. Helpful for young sprouts to develop, not so much for mature plants."),
+			},
+						'oatmeal':{
+				name:loc("Oatmeal"),
+				icon:1,
+				tick:1,
+				effMult:10,
+				weedMult:0,
+				req:0,
+				effsStr:'<div class="gray">&bull; '+loc("tick every %1",'<b>'+Game.sayTime(5*60*Game.fps)+'</b>')+'</div><div class="red">&bull; '+loc("passive plant effects")+' <b>-75%</b></div><div class="green">&bull; '+loc("plants spread and mutate <b>%1 times more</b>",3)+'</div><div class="green">&bull; '+loc("weed growth")+' <b>-90%</b></div>',
+				q:loc("Full of raisins. Plants ticks are 1 minute, are 10x efficient, auto harvest at lifecycle end, 5x mutation rate, and no weeds."),
 			},
 		};
 		M.soilsById=[];var n=0;for (var i in M.soils){M.soils[i].id=n;M.soils[i].key=i;M.soilsById[n]=M.soils[i];n++;}
@@ -1867,6 +1877,7 @@ M.launch=function()
 				
 				var loops=1;
 				if (M.soilsById[M.soil].key=='woodchips') loops=3;
+				if (M.soilsById[M.soil].key=='oatmeal') loops=5;
 				loops=randomFloor(loops*dragonBoost);
 				loops*=M.loopsMult;
 				M.loopsMult=1;
@@ -1894,6 +1905,10 @@ M.launch=function()
 									{
 										if (M.unlockSeed(me)) Game.Popup(loc("Unlocked %1 seed.",me.name),Game.mouseX,Game.mouseY);
 									}
+									if (M.soilsById[M.soil].key=='oatmeal')
+										{
+											if (M.unlockSeed(me)) Game.Popup(loc("Unlocked %1 seed.",me.name),Game.mouseX,Game.mouseY);
+										}
 								}
 								else if (!me.noContam)
 								{

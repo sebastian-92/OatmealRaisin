@@ -2488,8 +2488,8 @@ Game.Launch=function()
 		
 		Game.externalDataLoaded=false;
 		
-		Game.grandmaNames=[];
-		Game.customGrandmaNames=['THE OG GERTRUDE', 'GERTRUDE I', 'GERTRUDE II', 'GERTRUDE III', 'EDURTREG'];
+		Game.grandmaNames=['THE OG GERTRUDE', 'GERTRUDE I', 'GERTRUDE II', 'GERTRUDE III', 'EDURTREG', 'GERTLE THE TURTLE'];
+		Game.customGrandmaNames=['THE OG GERTRUDE', 'GERTRUDE I', 'GERTRUDE II', 'GERTRUDE III', 'EDURTREG', 'GERTLE THE TURTLE'];
 		Game.heralds=0;
 		
 		Game.GrabData=function()
@@ -2525,7 +2525,8 @@ Game.Launch=function()
 				Game.externalDataLoaded=true;
 			}catch(e){}
 		}
-		
+
+		Game.grandmaNames = Game.customGrandmaNames
 		
 		if (!App)
 		{
