@@ -2033,7 +2033,7 @@ Game.Launch=function()
 		Game.milkH=Game.milkProgress/2;//milk height, between 0 and 1 (although should never go above 0.5)
 		Game.milkHd=0;//milk height display
 		Game.milkType=0;//custom milk
-		Game.bgType=0;//custom background
+		Game.bgType=25;//custom background
 		Game.chimeType=0;//golden cookie chime
 		Game.prestige=0;//prestige level (recalculated depending on Game.cookiesReset)
 		Game.heavenlyChips=0;//heavenly chips the player currently has
@@ -2208,7 +2208,7 @@ Game.Launch=function()
 		
 		Game.showBackupWarning=function()
 		{
-			Game.Notify(loc("Back up your save!"),loc("Hello again! Just a reminder that you may want to back up your Cookie Clicker save every once in a while, just in case.<br>To do so, go to Options and hit \"Export save\" or \"Save to file\"!")+'<div class="line"></div><a style="float:right;" onclick="Game.prefs.showBackupWarning=0;==CLOSETHIS()==">'+loc("Don't show this again")+'</a>',[25,7]);
+			console.log("Removed that annoying backup warning thing. It would be showing just about now")
 		}
 		
 		
@@ -2487,8 +2487,6 @@ Game.Launch=function()
 		=======================================================================================*/
 		
 		Game.externalDataLoaded=false;
-		
-		Game.grandmaNames=['THE OG GERTRUDE', 'GERTRUDE I', 'GERTRUDE II', 'GERTRUDE III', 'EDURTREG', 'GERTLE THE TURTLE'];
 		Game.customGrandmaNames=['THE OG GERTRUDE', 'GERTRUDE I', 'GERTRUDE II', 'GERTRUDE III', 'EDURTREG', 'GERTLE THE TURTLE'];
 		Game.heralds=0;
 		
@@ -2526,7 +2524,6 @@ Game.Launch=function()
 			}catch(e){}
 		}
 
-		Game.grandmaNames = Game.customGrandmaNames
 		
 		if (!App)
 		{
@@ -3503,7 +3500,7 @@ Game.Launch=function()
 			Game.cookiesPsRawHighest=0;
 			if (hard)
 			{
-				Game.bgType=0;
+				Game.bgType=25;
 				Game.milkType=0;
 				Game.chimeType=0;
 				
@@ -8396,7 +8393,7 @@ Game.Launch=function()
 							ctx.textAlign='center';
 							Math.seedrandom(Game.seed+' '+pic.id/*+' '+pic.id*/);//(Game.seed+' '+pic.id+' '+pic.x+' '+pic.y);
 							var years=((Date.now()-new Date(2013,7,8))/(1000*60*60*24*365))+Math.random();//the grandmas age with the game
-							var name=choose(Game.grandmaNames);
+							var name=choose(Game.customGrandmaNames);
 							var custom=false;
 							if (Game.prefs.customGrandmas && Game.customGrandmaNames.length>0 && Math.random()<0.2) {name=choose(Game.customGrandmaNames);custom=true;}
 							var text=loc("%1, age %2",[name,Beautify(Math.floor(70+Math.random()*30+years+this.level))]);
@@ -10965,6 +10962,7 @@ Game.Launch=function()
 			{pic:'bgSky',name:'Sky',icon:[29,22]},
 			{pic:'bgStars',name:'Night',icon:[31,22]},
 			{pic:'bgFoil',name:'Foil',icon:[25,34]},
+			{pic:'bgMeal',name:'Oatmeal',icon:[10,6]},
 		];
 		Game.BGsByChoice={};
 		for (var i=0;i<Game.AllBGs.length;i++)

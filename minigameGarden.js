@@ -932,7 +932,7 @@ M.launch=function()
 				effMult:10,
 				weedMult:0,
 				req:0,
-				effsStr:'<div class="gray">&bull; '+loc("tick every %1",'<b>'+Game.sayTime(5*60*Game.fps)+'</b>')+'</div><div class="red">&bull; '+loc("passive plant effects")+' <b>-75%</b></div><div class="green">&bull; '+loc("plants spread and mutate <b>%1 times more</b>",3)+'</div><div class="green">&bull; '+loc("weed growth")+' <b>-90%</b></div>',
+				effsStr:'<div class="green">&bull; '+loc("tick every %1",'<b>'+Game.sayTime(1*60*Game.fps)+'</b>')+'</div><div class="green">&bull; '+loc("passive plant effects")+' <b>x10</b></div><div class="green">&bull; '+loc("plants spread and mutate <b>%1 times more</b>",5)+'</div><div class="green">&bull; '+loc("weed growth")+' <b>0%</b></div>',
 				q:loc("Full of raisins. Plants ticks are 1 minute, are 10x efficient, auto harvest at lifecycle end, 5x mutation rate, and no weeds."),
 			},
 		};
