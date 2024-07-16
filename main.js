@@ -10938,7 +10938,7 @@ Game.Launch=function()
 		{Game.bgType=id;}
 		
 		Game.AllBGs=[
-			{pic:'bgBlue',name:'Automatic',icon:[0,7]},
+			{pic:'bgMeal',name:'Automatic',icon:[0,7]},
 			{pic:'bgBlue',name:'Blue',icon:[21,21]},
 			{pic:'bgRed',name:'Red',icon:[22,21]},
 			{pic:'bgWhite',name:'White',icon:[23,21]},
@@ -15266,7 +15266,7 @@ Game.Launch=function()
 					else
 					{
 						l('backgroundCanvas').style.background='transparent';
-						Game.defaultBg='bgBlue';
+						Game.defaultBg='bgMeal';
 						Game.bgR=0;
 						
 						if (Game.season=='fools') Game.defaultBg='bgMoney';
