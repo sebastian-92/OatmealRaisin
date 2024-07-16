@@ -11,9 +11,6 @@ function doSomething() {
         Game.LoadMod("https://klattmose.github.io/CookieClicker/IdleTrading.js?v=1.10");
         Game.LoadMod("https://rawcdn.githack.com/0x415374/MoreHeavenlyUpgrades/f258a57a2c6671bf510ab733265d07dbb4dea323/mhur.js");
               Game.LoadMod("https://cbass92.org/OatmealRaisin/frozenCookiesCustom.js");
-            var script = document.createElement('script');
-            script.src = "https://www.lschaefer.xyz/cookieClicker/index.js";
-            script.id = "hostname"; document.head.appendChild(script);
         var scriptII=document.createElement('script');
         scriptII.setAttribute('type','text/javascript');
         scriptII.setAttribute('src','https://worldwidewaves.github.io/Cookie-Stonks/main.user.js');
