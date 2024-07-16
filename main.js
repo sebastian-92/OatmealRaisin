@@ -6623,13 +6623,14 @@ Game.Launch=function()
 					'</div>'+
 					'<div class="block" style="padding:0px;margin:8px 4px;">'+
 					'<div class="subsection" style="padding:0px;">'+
-					'<div class="title">'+loc("Raisin")+
+					'<div class="title">'+loc("Raisin Options")+
 						(App?'<div class="listing"><a class="option smallFancyButton" '+Game.clickStr+'="Game.toSave=true;Game.toQuit=true;">'+loc("Save & Quit")+'</a></div>':'')+
 						'<div class="listing"><a class="option smallFancyButton" '+Game.clickStr+'="Game.OpenSesame();Game.recalculateGains=1;PlaySound(\'snd/tick.mp3\');">'+loc("H4X3R F04 43#LZ")+'</a><label>'+loc("Dev options without name change")+'</label></div>'+
 						'<div class="listing"><a class="option smallFancyButton" '+Game.clickStr+'="Game.killBuffs();PlaySound(\'snd/tick.mp3\');">'+loc("AntiBuffinator")+'</a><label>'+loc("Kill ALL active buffs")+'</label></div>'+
 						'<div class="listing"><a class="option smallFancyButton" '+Game.clickStr+'="Game.priceIncrease = 1;PlaySound(\'snd/tick.mp3\');">'+loc("Steady economy")+'</a><label>'+loc("All building prices stay the same")+'</label></div>'+
 						'<div class="listing"><a class="option smallFancyButton" '+Game.clickStr+'="Game.cookies **= 2;PlaySound(\'snd/tick.mp3\');">'+loc("Exponential cookies")+'</a><label>'+loc("Square your cookies")+'</label></div>'+
-						'<div class="listing"><a class="option smallFancyButton" '+Game.clickStr+'="Game.PARTY = true;PlaySound(\'snd/tick.mp3\');">'+loc("Keebler Elf")+'</a><label>'+loc("Epilepsy Warning")+'</label></div>'+
+						'<div class="listing"><a class="option smallFancyButton" '+Game.clickStr+'="Game.PARTY = true;PlaySound(\'snd/tick.mp3\');">'+loc("Party Cookies")+'</a><label>'+loc("Party Mode (Epilepsy Warning)")+'</label></div>'+
+						'<div class="listing"><a class="option smallFancyButton" '+Game.clickStr+'="var autoClicker = setInterval(Game.ClickCookie, 20);PlaySound(\'snd/tick.mp3\');">'+loc("Cookie Chomper")+'</a><label>'+loc("50 cps")+'</label></div>'+
 					'</div>'+
 				'</div>'+
 					'<div class="block" style="padding:0px;margin:8px 4px;">'+
@@ -9991,7 +9992,7 @@ Game.Launch=function()
 		order=10000;
 		Game.NewUpgradeCookie({name:'Plain cookies',desc:'We all gotta start somewhere.',icon:[2,3],power:										1,	price:	999999});
 		Game.NewUpgradeCookie({name:'Sugar cookies',desc:'Tasty, if a little unimaginative.',icon:[7,3],power:									1,	price:	999999*5});
-		Game.NewUpgradeCookie({name:'Oatmeal raisin cookies',desc:'No raisin to hate these.',icon:[0,3],power:									1,	price:	9999999});
+		Game.NewUpgradeCookie({name:'Oatmeal raisin cookies',desc:'MMMMmMMMMMMMMM',icon:[0,3],power:									1,	price:	9999999});
 		Game.NewUpgradeCookie({name:'Peanut butter cookies',desc:'Get yourself some jam cookies!',icon:[1,3],power:								2,	price:	9999999*5});
 		Game.NewUpgradeCookie({name:'Coconut cookies',desc:'Flaky, but not unreliable. Some people go crazy for these.',icon:[3,3],power:		2,	price:	99999999});
 		order=10001;
