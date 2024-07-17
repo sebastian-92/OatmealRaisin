@@ -497,7 +497,7 @@ M.launch=function()
 		str+='<div style="position:absolute;left:2px;top:2px;z-index:10;">'+
 			'<div id="bankGraphLines" class="bankSimpleButton" style="background:rgba(0,0,0,0.5);padding:2px;border-radius:4px;">'+loc("Line style")+'</div>'+
 			'<div id="bankGraphCols" class="bankSimpleButton" style="background:rgba(0,0,0,0.5);padding:2px;border-radius:4px;">'+loc("Color mode")+'</div>'+
-			'<div id="bankCheatSpeed" class="bankSimpleButton" style="background:rgba(0,0,0,0.5);padding:2px;border-radius:4px;">'+loc("Speedy Stocks")+'</div>':''+
+			'<div id="bankCheatSpeed" class="bankSimpleButton" style="background:rgba(0,0,0,0.5);padding:2px;border-radius:4px;">'+loc("Speedy Stocks")+'</div>'+
 		'</div>'+
 		'<div style="font-family:Arial Black;font-weight:40px;letter-spacing:2px;opacity:0.15;font-weight:bold;position:absolute;left:6px;bottom:6px;z-index:10;pointer-events:none;">DOUGH JONES INDEX</div>';
 		for (var i=0;i<M.goodsById.length;i++)
