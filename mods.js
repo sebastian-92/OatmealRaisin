@@ -9,8 +9,9 @@ function doSomething() {
         Game.LoadMod('https://klattmose.github.io/CookieClicker/AmericanSeason.js');
         Game.LoadMod('https://klattmose.github.io/CookieClicker/minigameCasino.js');
         Game.LoadMod("https://klattmose.github.io/CookieClicker/IdleTrading.js?v=1.10");
-        Game.LoadMod("https://rawcdn.githack.com/0x415374/MoreHeavenlyUpgrades/f258a57a2c6671bf510ab733265d07dbb4dea323/mhur.js");
-              Game.LoadMod("https://cbass92.org/OatmealRaisin/frozenCookiesCustom.js");
+        Game.LoadMod('https://hyoretsu.github.io/DarkysCheevosPackage/dist/main.js');
+        Game.LoadMod('https://gamrguy.github.io/OmniscientCookies/OmniscientCookies.js');
+        Game.LoadMod("https://cbass92.org/OatmealRaisin/frozenCookiesCustom.js");
         var scriptII=document.createElement('script');
         scriptII.setAttribute('type','text/javascript');
         scriptII.setAttribute('src','https://worldwidewaves.github.io/Cookie-Stonks/main.user.js');
