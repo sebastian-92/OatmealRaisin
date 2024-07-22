@@ -11,7 +11,7 @@ function doSomething() {
         Game.LoadMod("https://cdn.jsdelivr.net/gh/klattmose/CookieClicker/IdleTrading.min.js");
         Game.LoadMod('https://cdn.jsdelivr.net/gh/hyoretsu/DarkysCheevosPackage/dist/main.min.js');
         Game.LoadMod('https://cdn.jsdelivr.net/gh/gamrguy/OmniscientCookies/OmniscientCookies.min.js');
-        Game.LoadMod("https://cdn.jsdelivr.net/gh/cdn.jsdelivr.net/gh/sebastian-92/OatmealRaisin/frozenCookiesCustom.min.js");
+        Game.LoadMod("https://cdn.jsdelivr.net/gh/sebastian-92/OatmealRaisin/frozenCookiesCustom.min.js");
         var scriptII=document.createElement('script');
         scriptII.setAttribute('type','text/javascript');
         scriptII.setAttribute('src','https://cdn.jsdelivr.net/gh/worldwidewaves/Cookie-Stonks/main.user.js');
